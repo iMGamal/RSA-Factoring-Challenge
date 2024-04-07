@@ -1,3 +1,4 @@
+if __name__ == "__main__":
 def factors(n):
     for q in range(2, n):
         if n % q == 0:
