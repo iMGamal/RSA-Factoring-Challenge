@@ -1,8 +1,0 @@
-if __name__ == "__main__":
-def factors(n):
-    for q in range(2, n):
-        if n % q == 0:
-            p = int (n / q)
-            print(str(n) + "=" + str(p) + "*" + str(q))
-            return''
-print(factors(n))
