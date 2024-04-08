@@ -1,8 +1,13 @@
-#!/bin/bash
-FILE=$1
-while read NUMBERS;
-do
-	factors=($(factor $NUMBERS))
-	echo "$NUMBERS=$(($NUMBERS/${factors[1]}))*${factors[1]}"
-done < $FILE
-
+#!/usr/bin/python3
+from sys import argv
+def factors(n):
+    n = int(n)
+    for q in range(2, n):
+        if n % q == 0:
+            p = n // q
+            print(str(n) + "=" + str(p) + "*" + str(q))
+            break
+    return''
+with open(argv[1]) as f:
+    n = f.read().strip()
+print(factors(n))
